@@ -1,3 +1,98 @@
-html {
+html, body {
     font-family: 'Ubuntu', sans-serif;
+}
+
+/* Light */
+@media (prefers-color-scheme: light) {
+    body {
+        background: #eceff4;
+        color: #2e3440;
+    }
+
+    a {
+        color: #5e81ac;
+        text-decoration:none;
+    }
+
+    a:hover {
+        text-decoration: underline
+    }
+
+    a:visited {
+        color: #81a1c1;
+    }
+
+    #content > header {
+        border-bottom: #d8dee9 1px solid;
+    }
+
+    #content > footer {
+        border-top: #d8dee9 1px solid;
+    }
+}
+
+/* Dark */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #2e3440;
+        color: #eceff4;
+    }
+
+    a {
+        color: #5e81ac;
+        text-decoration:none;
+    }
+
+    a:hover {
+        text-decoration: underline
+    }
+
+    a:visited {
+        color: #81a1c1;
+    }
+
+    #content > header {
+        border-bottom: #4c566a 1px solid;
+    }
+
+    #content > footer {
+        border-top: #4c566a 1px solid;
+    }
+}
+
+#content {
+    width: 95%;
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#content > header {
+    margin: 0 0 2em 0;
+    text-align: center;
+}
+
+#content > footer {
+    margin: 2em 0 0 0;
+    padding: 2em 0 0 0;
+    text-align: center;
+}
+
+.post-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post-list li {
+    margin: 0;
+    padding: .2em 0;
+}
+
+.date {
+    font-size: 75%;
+}
+
+.post section {
+    line-height: 1.4em;
 }

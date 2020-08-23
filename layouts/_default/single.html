@@ -1,37 +1,41 @@
 {{define "main"}}
 
+<article class="post">
 <!--Title-->
-<h2>{{.Title}}</h2>
-
-<!--Date-->
-{{.Date.Format "2006-01-30"}}
+<header>
+    <h2>
+        {{.Title}}
+    </h2>
+    <p class="date">{{.Date.Format "2006-01-03"}} &sdot; {{.ReadingTime}} minutes </p>
+</header>
 
 <!--TOC-->
 {{.TableOfContents}}
 
 <!--Content-->
-{{.Content}}
+<section>
+    {{.Content}}
+</section>
 
-<!--Tag-->
-<ul>
-	{{range (.GetTerms "tags")}}
-	<li><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></li>
-	{{end}}
-</ul>
+<footer>
+    <!--Tag-->
+    <ul>
+        {{range (.GetTerms "tags")}}
+        <li><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></li>
+        {{end}}
+    </ul>
 
-<!--Prev/Next-->
-{{with .PrevInSection}}Prev <a href="{{.RelPermalink}}">{{.Title}}</a>{{end}}
-{{with .NextInSection}}Next <a href="{{.RelPermalink}}">{{.Title}}</a>{{end}}
-
-<!--Related-->
-{{$related := .Site.RegularPages.Related . | first 5}}
-{{with $related}}
-<h3>See Also</h3>
-<ul>
-	{{range .}}
-	<li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-	{{end}}
-</ul>
-{{end}}
+    <!--Related-->
+    {{$related := .Site.RegularPages.Related . | first 5}}
+    {{with $related}}
+    <h3>See Also</h3>
+    <ul>
+        {{range .}}
+        <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+        {{end}}
+    </ul>
+    {{end}}
+    </footer>
+</article>
 
 {{end}}
