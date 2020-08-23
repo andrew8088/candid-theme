@@ -12,6 +12,14 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2em;
 }
 
+.highlight {
+    font-size: 1em;
+}
+
+.highlight code {
+    font-family: 'Source Code Pro', monospace;
+}
+
 /* Light */
 @media (prefers-color-scheme: light) {
     body {
