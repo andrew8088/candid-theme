@@ -1,0 +1,12 @@
+description = "Custom theme for candidcode.net"
+features    = []
+homepage    = "https://candidcode.net"
+license     = "MIT"
+licenselink = "https://github.com/andrew8088/candid-theme/blob/master/LICENSE"
+min_version = "0.65.0"
+name        = "candid-theme"
+tags        = ["blog", "clean", "minimal", "personal", "simple"]
+
+[author]
+homepage = "https://candidcode.net/"
+name     = "Andrew Burgess"
