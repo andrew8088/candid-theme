@@ -1,25 +1,27 @@
 {{define "main"}}
 
-<!--$paginator-->
-{{$p := .Pages}}
-{{if .IsHome}}
-{{$p = where site.RegularPages "Type" "in" site.Params.mainSections}}
-{{else if eq .Kind "taxonomy"}}
-{{$p = $p.ByTitle}}
-{{end}}
-{{$paginator := .Paginate $p}}
+<section>
+    <!--$paginator-->
+    {{$p := .Pages}}
+    {{if .IsHome}}
+    {{$p = where site.RegularPages "Type" "in" site.Params.mainSections}}
+    {{else if eq .Kind "taxonomy"}}
+    {{$p = $p.ByTitle}}
+    {{end}}
+    {{$paginator := .Paginate $p}}
 
-<!--list-->
-<ul class="post-list">
-	{{range $paginator.Pages}}
-    <li>
-        <span class="date">{{.Date.Format "2006-01-02"}} &sdot; </span>
-        <a href="{{.RelPermalink}}">{{.Title}}</a>
-    </li>
-	{{end}}
-</ul>
+    <!--list-->
+    <ul class="post-list">
+        {{range $paginator.Pages}}
+        <li>
+            <span class="date">{{.Date.Format "2006-01-02"}} &sdot; </span>
+            <a href="{{.RelPermalink}}">{{.Title}}</a>
+        </li>
+        {{end}}
+    </ul>
 
-<!--pagination-->
-{{template "_internal/pagination.html" .}}
+    <!--pagination-->
+    {{template "_internal/pagination.html" .}}
+</section>
 
 {{end}}

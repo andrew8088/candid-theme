@@ -1,6 +1,12 @@
 <header>
-<!--Site Title-->
-<h1><a href="{{ "" | relLangURL}}">{{site.Title}}</a></h1>
-<!--Sub-title-->
-{{with site.Params.subtitle}} / {{.}}{{end}}
+    <!--Site Title-->
+    <h1><a href="{{ "" | relLangURL}}">{{site.Title}}</a></h1>
+    <!--Sub-title-->
+    {{with site.Params.subtitle}} / {{.}}{{end}}
+    <nav>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+            <a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        {{ end }}
+    </nav>
 </header>

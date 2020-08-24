@@ -20,24 +20,24 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Source Code Pro', monospace;
 }
 
+a {
+    color: #5e81ac;
+    text-decoration:none;
+}
+
+a:visited {
+    color: #81a1c1;
+}
+
+a:hover {
+    color: #a3be8c;
+}
+
 /* Light */
 @media (prefers-color-scheme: light) {
     body {
         background: #eceff4;
         color: #434c5e;
-    }
-
-    a {
-        color: #5e81ac;
-        text-decoration:none;
-    }
-
-    a:hover {
-        text-decoration: underline
-    }
-
-    a:visited {
-        color: #81a1c1;
     }
 
     #content > header {
@@ -54,19 +54,6 @@ h1, h2, h3, h4, h5, h6 {
     body {
         background: #2e3440;
         color: #eceff4;
-    }
-
-    a {
-        color: #5e81ac;
-        text-decoration:none;
-    }
-
-    a:hover {
-        text-decoration: underline
-    }
-
-    a:visited {
-        color: #81a1c1;
     }
 
     #content > header {
@@ -86,15 +73,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #content > header {
-    margin: 0 0 2em 0;
     text-align: center;
     font-size: 1.5em;
 }
 
+#content > header > nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #content > footer {
-    margin: 2em 0 0 0;
     padding: 2em 0 0 0;
     text-align: center;
+}
+
+#content > section {
+    margin: 2em 0 2em 0;
 }
 
 .post-list {
