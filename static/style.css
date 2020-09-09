@@ -1,16 +1,24 @@
 /* Fonts */
 
 html, body {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Noto Serif JP', serif;
     font-size: 1.1em;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
+}
+
+h1, h2 {
     font-size: 2em;
 }
+
+h3 {
+    font-size: 1.5em;
+}
+
 
 .highlight {
     font-size: 1em;
@@ -80,6 +88,7 @@ a:hover {
 #content > header > nav {
     display: flex;
     justify-content: space-evenly;
+    font-family: 'Roboto Slab', serif;
 }
 
 #content > footer {
