@@ -24,8 +24,19 @@ h3 {
     font-size: 1em;
 }
 
+.highlight > pre {
+    padding: 1em;
+}
+
 .highlight code {
     font-family: 'Source Code Pro', monospace;
+}
+
+p > code {
+    border: 1px solid #5e81ac;
+    border-radius: 5px;
+    padding: 0 2px;
+    display: inline-block;
 }
 
 a {
@@ -39,6 +50,23 @@ a:visited {
 
 a:hover {
     color: #a3be8c;
+}
+
+a[href^="https://github.com/candid-code"] {
+    font-family: 'Source Code Pro', monospace;
+    border: 1px solid #5e81ac;
+    border-radius: 5px;
+    padding: 0 2px;
+    display: inline-block;
+    font-size: 70%;
+    line-height: 1.5em
+}
+
+a[href^="https://github.com/candid-code"]::before {
+    content: "‹"
+}
+a[href^="https://github.com/candid-code"]::after {
+    content: "›"
 }
 
 /* Light */
@@ -55,6 +83,9 @@ a:hover {
     #content > footer {
         border-top: #d8dee9 1px solid;
     }
+    p > code {
+        background: #88c0d0;
+    }
 }
 
 /* Dark */
@@ -70,6 +101,9 @@ a:hover {
 
     #content > footer {
         border-top: #4c566a 1px solid;
+    }
+    p > code {
+        background: #4c566a;
     }
 }
 
