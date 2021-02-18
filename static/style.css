@@ -11,7 +11,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
 }
 
-h1, h2 {
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
     font-size: 2em;
 }
 
@@ -37,10 +41,10 @@ blockquote {
 }
 
 p > code {
-    border: 1px solid #5e81ac;
-    border-radius: 5px;
-    padding: 0 2px;
-    display: inline-block;
+    /* border: 1px solid #5e81ac; */
+    /* border-radius: 5px; */
+    padding: 3px 0 1px 0;
+    /* display: inline-block; */
 }
 
 a {
