@@ -14,8 +14,8 @@
     <ul class="post-list">
         {{range $paginator.Pages}}
         <li>
-            <span class="date">{{.Date.Format "2006-01-02"}} &sdot; </span>
             <a href="{{.RelPermalink}}">{{.Title}}</a>
+            <span class="date"> &sdot; {{.Date.Format "Jan 2006"}} </span>
         </li>
         {{end}}
     </ul>

@@ -1,4 +1,4 @@
 <footer>
-{{with .Site.Copyright}}{{.}} / {{end}}
-Powered by <a href="https://gohugo.io">Hugo</a>
+{{with .Site.Copyright}}{{replace . "{year}" now.Year }} {{end}}
+Powered by <a href="https://gohugo.io">Hugo</a>.
 </footer>
