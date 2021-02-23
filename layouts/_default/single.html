@@ -13,26 +13,5 @@
 <section>
     {{.Content}}
 </section>
-
-<footer>
-    <!--Tag-->
-    <ul>
-        {{range (.GetTerms "tags")}}
-        <li><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></li>
-        {{end}}
-    </ul>
-
-    <!--Related-->
-    {{$related := .Site.RegularPages.Related . | first 5}}
-    {{with $related}}
-    <h3>See Also</h3>
-    <ul>
-        {{range .}}
-        <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-        {{end}}
-    </ul>
-    {{end}}
-    </footer>
 </article>
-
 {{end}}
