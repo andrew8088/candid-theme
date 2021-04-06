@@ -86,9 +86,6 @@ a[href^="https://github.com/candid-code"]::after {
     #content > footer {
         border-top: #d8dee9 1px solid;
     }
-    p code, ul code {
-        background: #88c0d0;
-    }
     blockquote {
         border-left: 10px solid #d8dee9;
     }
@@ -107,9 +104,6 @@ a[href^="https://github.com/candid-code"]::after {
 
     #content > footer {
         border-top: #4c566a 1px solid;
-    }
-    p code, ul code {
-        background: #4c566a;
     }
     blockquote {
         border-left: 10px solid #5e81ac;
