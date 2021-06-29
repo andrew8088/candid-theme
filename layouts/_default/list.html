@@ -15,7 +15,16 @@
         {{range $paginator.Pages}}
         <li>
             <a href="{{.RelPermalink}}">{{.Title}}</a>
-            <span class="date"> &sdot; {{.Date.Format "Jan 2006"}} </span>
+            <span class="date">
+                {{if .Params.Link}}
+                    &sdot;
+                    📌
+                {{end}}
+                &sdot;
+                {{.Date.Format "Jan 2006"}}
+
+            </span>
+
         </li>
         {{end}}
     </ul>

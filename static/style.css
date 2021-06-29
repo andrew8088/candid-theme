@@ -55,21 +55,26 @@ a:hover {
     color: #a3be8c;
 }
 
-a[href^="https://github.com/candid-code"] {
-    font-family: 'Source Code Pro', monospace;
-    border: 1px solid #5e81ac;
-    border-radius: 5px;
-    padding: 0 2px;
-    display: inline-block;
-    font-size: 70%;
-    line-height: 1.5em
-}
+/* a[href^="https://github.com/candid-code"] { */
+/*     font-family: 'Source Code Pro', monospace; */
+/*     border: 1px solid #5e81ac; */
+/*     border-radius: 5px; */
+/*     padding: 0 2px; */
+/*     display: inline-block; */
+/*     font-size: 70%; */
+/*     line-height: 1.5em */
+/* } */
 
-a[href^="https://github.com/candid-code"]::before {
-    content: "‹"
-}
-a[href^="https://github.com/candid-code"]::after {
-    content: "›"
+/* a[href^="https://github.com/candid-code"]::before { */
+/*     content: "‹" */
+/* } */
+/* a[href^="https://github.com/candid-code"]::after { */
+/*     content: "›" */
+/* } */
+
+    
+a.external {
+    text-decoration: underline;
 }
 
 /* Light */
@@ -157,3 +162,4 @@ a[href^="https://github.com/candid-code"]::after {
     line-height: 1.5em;
     margin: 2em 0 5em 0;
 }
+

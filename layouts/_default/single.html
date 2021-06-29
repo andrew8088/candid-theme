@@ -5,7 +5,11 @@
 <header>
     <p class="date">Updated {{.Lastmod.Format "Jan 2006"}} &sdot; {{.ReadingTime}} minutes </p>
     <h1>
-        {{.Title}}
+        {{if .Params.Link}}
+            <a rel="external" class="external" href="{{.Params.Link}}">{{.Title}}</a>
+        {{else}}
+            {{.Title}}
+        {{end}}
     </h1>
 </header>
 
