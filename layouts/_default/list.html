@@ -1,36 +1,7 @@
 {{define "main"}}
-
 <section>
-    <!--$paginator-->
-    {{$p := .Pages}}
-    {{if .IsHome}}
-    {{$p = where site.RegularPages "Type" "in" site.Params.mainSections}}
-    {{else if eq .Kind "taxonomy"}}
-    {{$p = $p.ByTitle}}
-    {{end}}
-    {{$paginator := .Paginate $p}}
-
-    <!--list-->
-    <ul class="post-list">
-        {{range $paginator.Pages}}
-        <li>
-            <a href="{{.RelPermalink}}">{{.Title}}</a>
-            <span class="date">
-                {{if .Params.Link}}
-                    &sdot;
-                    📌
-                {{end}}
-                &sdot;
-                {{.Date.Format "Jan 2006"}}
-
-            </span>
-
-        </li>
-        {{end}}
-    </ul>
-
-    <!--pagination-->
-    {{template "_internal/pagination.html" .}}
+  <p>
+    For what used to be here, as well as new stuff, please find my writing at <a href="https://shaky.sh">shaky.sh</a>.
+  </p>
 </section>
-
 {{end}}
